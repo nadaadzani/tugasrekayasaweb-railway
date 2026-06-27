@@ -4,7 +4,7 @@
     <div class="card shadow-sm">
         <div class="card-body">
             <h3>Tambah Project</h3>
-            <form action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-md-12 mb-3">
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a href="{{ route('projects.index') }}" class="btn btn-secondary">Batal</a>
+                        <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Batal</a>
                     </div>
                 </div>
             </form>
