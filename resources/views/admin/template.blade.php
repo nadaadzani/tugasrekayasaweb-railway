@@ -67,7 +67,7 @@
     <div class="sidebar shadow-sm">
         <h5 class="text-center text-white py-3">Admin Menu</h5>
         <a href="{{ route('admin.dashboard') }}" class="list-group-item list-group-item-action">Admin Dashboard</a>
-        <a href="{{ route('projects.index') }}" class="list-group-item list-group-item-action">Data Project</a>
+        <a href="{{ route('admin.projects.index') }}" class="list-group-item list-group-item-action">Data Project</a>
         <a href="{{ route('admin.users') }}" class="list-group-item list-group-item-action">Data Users</a>
     </div>
     <div class="content p-3 d-flex flex-column">
