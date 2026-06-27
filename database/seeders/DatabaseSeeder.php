@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
-        // $this->call([
-        //     ProjectSeeder::class
-        // ]);
+        $this->call([
+            ProjectSeeder::class
+        ]);
     }
 }
