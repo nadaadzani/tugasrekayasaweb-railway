@@ -13,7 +13,7 @@
     <div class="row mt-5 justify-content-center">
         <div class="col-lg-8 max-auto">
             <div class="card shadow-sm">
-                <img class="card-img-top" src="{{ asset('images/' . $project->image) }}" alt="">
+                <img class="card-img-top" src="{{ secure_asset('images/' . $project->image) }}" alt="">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{ $project->title }}</h5>
                     <div class="mb-4">

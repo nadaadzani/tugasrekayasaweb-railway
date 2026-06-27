@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('contact',[ContactController::class,'index']);
+Route::get('/contact',[ContactController::class,'index']);
 Route::get('/projects',[ProjectsController::class,'index'])->name('projects');
 Route::get('/projects/{id}',[ProjectsController::class,'show'])->name('projects.show');
 
