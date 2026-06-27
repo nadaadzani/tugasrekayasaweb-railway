@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('contact',[ContactController::class,'index']);
 Route::get('/projects',[ProjectsController::class,'index'])->name('projects');
-Route::get('/projects/${id}',[ProjectsController::class,'show'])->name('projects.show');
+Route::get('/projects/{id}',[ProjectsController::class,'show'])->name('projects.show');
 
 Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
 Route::post('admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
@@ -29,7 +29,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/project/pdf', [AdminProjectController::class, 'cetakPdf'])->name('projects.pdf');
 
-    Route::resource('projects', AdminProjectController::class);
+    Route::resource('projects', AdminProjectController::class)->names('admin.projects');
     Route::get('/users', [UserController::class, 'index'])->name('admin.users');
 });
 

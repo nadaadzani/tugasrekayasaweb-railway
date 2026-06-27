@@ -43,7 +43,7 @@ class AdminProjectController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('projects.index')->with('success', 'Project created successfully.');
+        return redirect()->route('admin.projects.index')->with('success', 'Project created successfully.');
     }
 
     public function edit($id)
@@ -81,7 +81,7 @@ class AdminProjectController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
+        return redirect()->route('admin.projects.index')->with('success', 'Project updated successfully.');
     }
 
     public function destroy($id)
@@ -91,7 +91,7 @@ class AdminProjectController extends Controller
         //     unlink(public_path('images/' . $project->image));
         // }
         $project->delete();
-        return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
+        return redirect()->route('admin.projects.index')->with('success', 'Project deleted successfully.');
     }
 
     public function cetakPdf()

@@ -4,7 +4,7 @@
     <div class="container-fluid d-flex justify-content-between mb-3 py-3">
         <h3>Data Projects</h3>
         <header class="justify-content-end">
-            <a href="{{ route('projects.create') }}" class="btn btn-primary">Tambah Project</a>
+            <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Tambah Project</a>
             <a href="{{ route('projects.pdf') }}" class="btn btn-secondary" target="_blank">Cetak PDF</a>
         </header>
     </div>
@@ -43,8 +43,8 @@
                         <td>{{ $project->description }}</td>
                         <td>{{ $project->status }}</td>
                         <td>
-                            <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                            <form action="{{ route('projects.destroy', $project->id) }}" method="POST" class="d-inline">
+                            <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
